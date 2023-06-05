@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    text-align: center;
+    background: #000;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    background: #111;
+    padding: 20px 30px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container .post {
+    display: none;
+}
+
+.container .text {
+    font-size: 25px;
+    color: #666;
+    font-weight: 500;
+}
+
+.container .edit {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.container .edit:hover {
+    text-decoration: underline;
+}
+
+.container .star-widget input {
+    display: none;
+}
+
+.star-widget label {
+    font-size: 40px;
+    color: #444;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+}
+
+input:not(:checked)~label:hover,
+input:not(:checked)~label:hover~label {
+    color: #fd4;
+}
+
+input:checked~label {
+    color: #fd4;
+}
+
+input#rate-5:checked~label {
+    color: #fe7;
+    text-shadow: 0 0 20px #952;
+}
+
+#rate-1:checked~form header:before {
+    content: "I just hate it ";
+}
+
+#rate-2:checked~form header:before {
+    content: "I don't like it ";
+}
+
+#rate-3:checked~form header:before {
+    content: "It is awesome ";
+}
+
+#rate-4:checked~form header:before {
+    content: "I just like it ";
+}
+
+#rate-5:checked~form header:before {
+    content: "I just love it ";
+}
+
+.container form {
+    display: none;
+}
+
+input:checked~form {
+    display: block;
+}
+
+form header {
+    width: 100%;
+    font-size: 25px;
+    color: #fe7;
+    font-weight: 500;
+    margin: 5px 0 20px 0;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+form .textarea {
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+}
+
+form .textarea textarea {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #eee;
+    border: 1px solid #333;
+    background: #222;
+    padding: 10px;
+    font-size: 17px;
+    resize: none;
+}
+
+.textarea textarea:focus {
+    border-color: #444;
+}
+
+form .btn {
+    height: 45px;
+    width: 100%;
+    margin: 15px 0;
+}
+
+form .btn button {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #444;
+    outline: none;
+    background: #222;
+    color: #999;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form .btn button:hover {
+    background: #1b1b1b;
+}
+.hero-txt{
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  }
+  .hero-txt h6{
+    color: #222223;
+  }
+  .hero-txt h3{
+    color: #050505c9;
+  }
+  .main-btn{
+    display: inline-block;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 2px solid transparent;
+    padding: 0 32px;
+    font-size: 16px;
+    line-height: 48px;
+    color: #0067f4;
+    position: relative ;
+    cursor: pointer;
+    transition: all 0.4s ease-out 0s;
+    z-index: 5;
+  }
+  .hero-txt .h-btn li{
+    display: inline-block;
+    margin: 10px 10px 0 0;
+  }
+  .hero-txt .h-btn li a.main-btn{
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: #fff;
+    border: 0;
+    line-height: 50px;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0,16);
+  
+  }
+  .hero-txt .h-btn li a.main-btn{
+    margin-left: 5px;
+    color: #f0f1f5;
+  }
+  .hero-txt .h-btn .btn-one{
+    color: #fff;
+  }
+  .hero-txt .h-btn .btn-one::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right,#535cf1,#a147e4);
+    z-index: -1;
+    transition: all 0.3s ease;
+    background-position: right center;
+  }
+  .hero-txt .h-btn .btn-two{
+    color: #fff;
+  }
+  .hero-txt .h-btn .btn-two::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right,#535cf1,#a147e4);
+    z-index: -1;
+    transition: all 0.3s ease;
+    background-position: right center;
+  }
